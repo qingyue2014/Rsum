@@ -1,0 +1,1 @@
+CUDA_VISIBLE_DEVICES="1,2" python -m torch.distributed.launch --nproc_per_node 1 --master_port=29410 main_llama.py --operation infer  --mode rsum --model_name llama2-7b-hf --test_batch_size 2 --saving_dir save_msc  --dataset msc --session_id 4 --topk 3
