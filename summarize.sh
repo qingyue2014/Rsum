@@ -1,0 +1,1 @@
+CUDA_VISIBLE_DEVICES="5,6" python -m torch.distributed.launch --nproc_per_node 2 --master_port=29405 main_llama.py --operation summarize  --mode full --model_name llama2-13b-chat --session_id 2 --test_batch_size 2 --saving_dir save50 
